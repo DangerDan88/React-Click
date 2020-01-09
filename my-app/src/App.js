@@ -63,11 +63,9 @@ class App extends Component {
   render() {
     return (
       <div>
+        <ScoreNav score={this.state.score} topScore={this.state.topScore} />
         <Jumbotron />
         <GameContainer>
-          <ScoreNav
-           score={this.state.score}
-          />
           {this.state.food.map(food => (
             <FoodCard
               redisplayFood={this.redisplayFood}
