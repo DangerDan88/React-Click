@@ -4,10 +4,9 @@ import "./style.css";
 function Jumbotron() {
   return (
     <div className="jumbotron">
-      <h1>Clicky Game</h1>
+      <h1>React Food Clicker</h1>
       <p>
-        Welcome to the game the objective is too click the images until you
-        reach the correct score.
+        Welcome to the game the objective is to click the images of my favorite foods and not click the same food more than once or you lose.
       </p>
     </div>
   );

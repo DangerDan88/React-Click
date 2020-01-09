@@ -1,6 +1,6 @@
 .GameContainer {
     padding-top: 50px;
-    background: rgb(136, 119, 211);
+    background: rgb(204, 144, 223);
     height: 100%;
     display: flex;
     flex-flow: row wrap;

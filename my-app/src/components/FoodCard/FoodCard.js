@@ -5,13 +5,17 @@ function FoodCard(props) {
   return (
     <div className="card">
       <div className="img-container">
-        <img alt={props.name} src={props.image} />
+        <img onClick={() => props.redisplayFood(props.id)} alt={props.name} src={props.image} />
+  
       </div>
-      <span onClick={() => props.redisplayFood(props.id)} className="remove">
-        𝘅
-      </span>
+ 
     </div>
   );
 }
 
 export default FoodCard;
+
+
+//<span onClick={() => props.redisplayFood(props.id)} className="remove">
+//x
+//</span>
