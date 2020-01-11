@@ -35,6 +35,7 @@ class App extends Component {
       });
     }
   };
+  // else if loss res set state back to original
   shuffle = arra1 => {
     var ctr = arra1.length,
       temp,
