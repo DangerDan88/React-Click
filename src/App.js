@@ -16,10 +16,18 @@ class App extends Component {
   };
 
   redisplayFood = id => {
+    console.log(id);
+    console.log(this.state.clickedCard);
     if (this.state.clickedCard.includes(id)) {
       if (this.state.topScore < this.state.score) {
         this.setState({
           topScore: this.state.score,
+          score: 0,
+          food: this.shuffle(food),
+          clickedCard: []
+        });
+      } else {
+        this.setState({
           score: 0,
           food: this.shuffle(food),
           clickedCard: []
@@ -55,9 +63,9 @@ class App extends Component {
     return arra1;
   };
   componentDidUpdate() {
-    console.log(this.state.topScore);
-    console.log(this.state.score);
-    console.log(this.state.clickedCard);
+    //console.log(this.state.topScore);
+    //console.log(this.state.score);
+    //console.log(this.state.clickedCard);
   }
 
   // Map over this.state.food and render a FoodCard component for each food object
