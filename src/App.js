@@ -12,25 +12,23 @@ class App extends Component {
     topScore: 0,
     food,
     clickedCard: [],
-    score: 0
+    score: 0,
   };
 
-  redisplayFood = id => {
-    console.log(id);
-    console.log(this.state.clickedCard);
+  redisplayFood = (id) => {
     if (this.state.clickedCard.includes(id)) {
       if (this.state.topScore < this.state.score) {
         this.setState({
           topScore: this.state.score,
           score: 0,
           food: this.shuffle(food),
-          clickedCard: []
+          clickedCard: [],
         });
       } else {
         this.setState({
           score: 0,
           food: this.shuffle(food),
-          clickedCard: []
+          clickedCard: [],
         });
       }
     } else {
@@ -39,12 +37,12 @@ class App extends Component {
       this.setState({
         food: this.shuffle(food),
         clickedCard: clickedCard,
-        score: this.state.score + 1
+        score: this.state.score + 1,
       });
     }
   };
   // else if loss res set state back to original
-  shuffle = arra1 => {
+  shuffle = (arra1) => {
     var ctr = arra1.length,
       temp,
       index;
@@ -75,7 +73,7 @@ class App extends Component {
         <ScoreNav score={this.state.score} topScore={this.state.topScore} />
         <Jumbotron />
         <GameContainer>
-          {this.state.food.map(food => (
+          {this.state.food.map((food) => (
             <FoodCard
               redisplayFood={this.redisplayFood}
               id={food.id}
