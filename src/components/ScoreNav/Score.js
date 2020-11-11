@@ -4,20 +4,20 @@ import "./style.css";
 function ScoreNav(props) {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-dark">
-      <a className="navbar-brand text-white text-monospace" href="#">
+      <button className="navbar-brand text-white text-monospace" href="#">
         ScoreBoard
-      </a>
+      </button>
       <div className="collapse navbar-collapse" id="navbarNavDropdown">
         <ul className="navbar-nav">
           <li className="nav-item">
-            <a className="nav-link text-white text-monospace" href="#">
+            <button className="nav-link text-white text-monospace" href="#">
               Score:{props.score}
-            </a>
+            </button>
           </li>
           <li className="nav-item">
-            <a className="nav-link text-white text-monospace" href="#">
+            <button className="nav-link text-white text-monospace" href="">
               Top Score:{props.topScore}
-            </a>
+            </button>
           </li>
         </ul>
       </div>
